@@ -4,11 +4,12 @@
              xmlns:viewModels="clr-namespace:UnityIoCContainer.ViewModels"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="True"
-             x:Class="UnityIoCContainer.Views.ProductsPage">
+             x:Class="UnityIoCContainer.Views.ProductsPage"
+             BindingContext="{Binding ProductsViewModel, Source={StaticResource Locator}}">
 
-    <ContentPage.BindingContext>
+    <!--<ContentPage.BindingContext>
         <viewModels:ProductsViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
 
     <ContentPage.Content>
         <ListView ItemsSource="{Binding Products}"/>
